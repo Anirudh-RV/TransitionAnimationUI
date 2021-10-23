@@ -1,6 +1,12 @@
 # TransitionAnimationUI
 
-An interactive UI which shows the transition between 2 Images.
+An interactive UI which shows the transition between 2 Images/Videos/Elements.
+
+Features:
+
+1. Can use a slider to compare between 2 Images.
+2. Can use a slider to compare between 2 Videos.
+
 
 Tech-Stack used:
 
