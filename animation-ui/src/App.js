@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import RangeStepInput from "./RangeStepInput";
-
+import displayFiles from "./constants";
 import "./App.css";
 
 const forceNumber = function (n) {
@@ -18,21 +18,8 @@ class App extends Component {
       clipPercentage: 50,
     };
   }
-  IncrementClip = () => {
-    console.log("Incrementing Clip");
-    this.setState({
-      clipPercentage: this.state.clipPercentage + 10,
-    });
-  };
 
-  DecrementClip = () => {
-    console.log("Decrementing Clip");
-    this.setState({
-      clipPercentage: this.state.clipPercentage - 10,
-    });
-  };
-
-  onChange = (e) => {
+  onSliderMovement = (e) => {
     const newVal = forceNumber(e.target.value);
     this.setState({ clipPercentage: newVal });
   };
@@ -43,8 +30,7 @@ class App extends Component {
         <div class="bg-gray-700 w-6/12 h-6/12 relative">
           <div class="absolute inset-0 flex justify-center items-center">
             <img
-              onClick={this.DecrementClip}
-              src="Task1RAW_Image.jpeg"
+              src={displayFiles.rawImage}
               alt="Raw"
               class="bg-gray-900"
               ref={(c) => (this.leftImage = c)}
@@ -52,8 +38,7 @@ class App extends Component {
           </div>
           <div class="absolute inset-0 flex justify-center items-center">
             <img
-              onClick={this.IncrementClip}
-              src="Task1Processed_Image.jpeg"
+              src={displayFiles.processedImage}
               alt="Processed"
               class="bg-gray-900 mix-blend-lighten"
               ref={(c) => (this.rightImage = c)}
@@ -68,7 +53,7 @@ class App extends Component {
               max={100}
               value={this.state.clipPercentage}
               step={1}
-              onChange={this.onChange.bind(this)}
+              onChange={this.onSliderMovement.bind(this)}
               class="absolute inset-0 flex justify-center items-center"
             />
           </div>
