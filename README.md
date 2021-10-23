@@ -12,3 +12,9 @@ https://stackoverflow.com/questions/65749715/div-on-top-of-another-with-tailwind
 
 Clipping away elements:
 https://css-tricks.com/almanac/properties/c/clip-path/
+
+# VIDEO
+
+
+https://user-images.githubusercontent.com/45145236/138551212-bd53a55c-b4cf-4a2c-9684-bdd0897adc68.mp4
+
