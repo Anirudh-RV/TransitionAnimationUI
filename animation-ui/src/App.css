@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .ImageClip {
+    /* Example: clip away the element from the top, right, bottom, and left edges */
+    clip-path: inset(0 0 0 50%);
+  }
+}
