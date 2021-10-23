@@ -10,7 +10,7 @@ function App() {
         <div class="absolute inset-0 flex justify-center items-center z-50">
           <img
             src="Task1Processed_Image.jpeg"
-            alt="Raw Image"
+            alt="Processed Image"
             class="bg-gray-900 mix-blend-lighten ImageClip"
           />
         </div>
