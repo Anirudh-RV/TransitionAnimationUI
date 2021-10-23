@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .ImageClip {
-    /* Example: clip away the element from the top, right, bottom, and left edges */
-    clip-path: inset(0 0 0 50%);
-  }
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  float: left;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  -webkit-appearance: none;
+  width: calc(30px / 2);
+  height: 30px;
+  background: rgba(0, 0, 0, 0);
+  border: calc(30px / 8) solid #ffffff;
+  border-radius: 100%;
+  border-width: calc(30px / 15) calc(30px / 2) calc(30px / 15) calc(30px / 15);
+  box-sizing: content-box;
 }
